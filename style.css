@@ -75,3 +75,20 @@ header {
 .buy-now-btn:hover {
     background-color: #e68a00;
 }
+footer {
+    background-color: #232f3e; /* Amazon-like dark blue background */
+    color: white;
+    text-align: center;
+    padding: 20px;
+    margin-top: 20px;
+}
+
+footer a {
+    color: #ff9900; /* Amazon-like orange */
+    text-decoration: none;
+    font-weight: bold;
+}
+
+footer a:hover {
+    text-decoration: underline;
+}
