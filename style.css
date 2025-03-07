@@ -1,94 +1,91 @@
-/* General Page Styling */
-body {
-    font-family: Arial, sans-serif;
+/* some default styles */
+* {
     margin: 0;
     padding: 0;
-    background-color: #f8f8f8;
+    box-sizing: border-box;
+    font-family: 'Poppins', sans-serif;
+    scroll-behavior: smooth;
 }
 
-/* Navbar (Amazon Style) */
-header {
-    background-color: #232f3e; /* Amazon-like dark blue */
-    color: white;
+/*  Background Styling */
+body {
+    background: linear-gradient(135deg, #ffafbd, #ffc3a0);
+    color: #333;
     text-align: center;
-    padding: 15px;
-    font-size: 24px;
-}
-
-/* Product Container */
-.product-container {
-    display: flex;
-    justify-content: center;
-    margin-top: 50px;
-}
-
-/* Product Card */
-.product-card {
-    background: white;
     padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.15);
-    width: 320px;
-    text-align: center;
 }
 
-/* Product Image */
-.product-card img {
-    width: 100%;
-    max-width: 280px;
-    border-radius: 10px;
+/* Smooth Fade-in Animation */
+@keyframes fadeIn {
+    from { opacity: 0; transform: translateY(20px); }
+    to { opacity: 1; transform: translateY(0); }
 }
 
-/* Order Now Button (Amazon Style) */
-.order-btn {
-    background-color: #ff9900; /* Amazon's button color */
+/* Header Styling */
+h1 {
+    font-size: 2.5rem;
+    color: #fff;
+    text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.2);
+    animation: fadeIn 1s ease-in-out;
+}
+
+/*  Animated Button */
+button {
+    background: #ff6f61;
     color: white;
-    padding: 12px 20px;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-    font-size: 18px;
-    margin-top: 15px;
-    width: 100%;
-    font-weight: bold;
-}
-
-.order-btn:hover {
-    background-color: #e68a00;
-}
-.buy-now-container {
-    text-align: center;
-    margin-top: 120px;
-}
-
-.buy-now-btn {
-    background-color: #ff9900;
-    color: white;
-    font-size: 18px;
     padding: 12px 24px;
     border: none;
-    border-radius: 8px;
+    border-radius: 25px;
+    font-size: 1.2rem;
     cursor: pointer;
-    transition: background 0.3s ease-in-out;
+    transition: 0.3s;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
 }
 
-.buy-now-btn:hover {
-    background-color: #e68a00;
+button:hover {
+    background: #ff3b2f;
+    transform: scale(1.1);
 }
-footer {
-    background-color: #232f3e; /* Amazon-like dark blue background */
-    color: white;
-    text-align: center;
+
+/*  Image Hover Effect */
+img {
+    width: 100%;
+    max-width: 400px;
+    border-radius: 20px;
+    transition: 0.4s;
+}
+
+img:hover {
+    transform: scale(1.05);
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.3);
+}
+
+/* Contact Section */
+.contact {
+    margin-top: 50px;
     padding: 20px;
-    margin-top: 20px;
+    background: rgba(0, 0, 0, 0.1);
+    border-radius: 15px;
+    animation: fadeIn 1.5s ease-in-out;
 }
 
-footer a {
-    color: #ff9900; /* Amazon-like orange */
-    text-decoration: none;
-    font-weight: bold;
+.contact h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
 }
 
-footer a:hover {
-    text-decoration: underline;
+/*  Responsive Design */
+@media (max-width: 768px) {
+    h1 {
+        font-size: 2rem;
+    }
+    
+    button {
+        font-size: 1rem;
+        padding: 10px 20px;
+    }
+    
+    img {
+        max-width: 300px;
+    }
 }
